@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets/FastFood.bundle.scp.css"
     },
     {
-      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/Menu.css",
-      "PackagePath": "staticwebassets/css/Menu.css"
-    },
-    {
       "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/admin/food/create.css",
       "PackagePath": "staticwebassets/css/admin/food/create.css"
     },
@@ -29,20 +25,24 @@
       "PackagePath": "staticwebassets/css/admin/site.css"
     },
     {
-      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/cart.css",
-      "PackagePath": "staticwebassets/css/cart.css"
-    },
-    {
-      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/checkout.css",
-      "PackagePath": "staticwebassets/css/checkout.css"
-    },
-    {
-      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/home.css",
-      "PackagePath": "staticwebassets/css/home.css"
-    },
-    {
       "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/user/Menu.css",
+      "PackagePath": "staticwebassets/css/user/Menu.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/user/cart.css",
+      "PackagePath": "staticwebassets/css/user/cart.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/user/checkout.css",
+      "PackagePath": "staticwebassets/css/user/checkout.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/user/home.css",
+      "PackagePath": "staticwebassets/css/user/home.css"
     },
     {
       "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/favicon.ico",

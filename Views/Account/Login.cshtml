@@ -172,17 +172,20 @@ font-weight:bold;
     <h1>Chào mừng trở lại!</h1>
     <p>Vui lòng đăng nhập vào tài khoản của bạn</p>
 
-    <form method="post" asp-controller="Account" asp-action="Login">
+
+    <form id="loginForm" onsubmit="return false">
 
         <div class="input-group">
-            <input type="text" name="Email" placeholder="Email hoặc số điện thoại">
-            <i class="fa fa-envelope"></i>
+            <input type="text" name="Username" placeholder="Tên đăng nhập" required>
+            <i class="fa fa-user"></i>
         </div>
 
         <div class="input-group">
-            <input type="password" name="Password" placeholder="Mật khẩu">
+            <input type="password" name="Password" placeholder="Mật khẩu" required>
             <i class="fa fa-lock"></i>
         </div>
+        
+        <div id="loginError" class="text-danger mt-2" style="display:none;"></div>
 
         <div class="options">
 
@@ -194,7 +197,7 @@ font-weight:bold;
 
         </div>
 
-        <button class="login-btn">
+        <button type = "submit" class="login-btn">
             Đăng Nhập
         </button>
 
@@ -227,13 +230,3 @@ font-weight:bold;
 
 </div>
 
-
-
-<script>
-let returnUrl = sessionStorage.getItem("returnUrl");
-
-if(returnUrl){
-    sessionStorage.removeItem("returnUrl");
-    window.location.href = returnUrl;
-}
-</script>

@@ -131,10 +131,10 @@ font-weight:bold;
 <h1>Tạo tài khoản</h1>
 <p>Đăng ký để sử dụng dịch vụ</p>
 
-<form method="post" asp-action="Register">
+<form id="registerForm">
 
 <div class="input-group">
-<input type="text" name="Name" placeholder="Họ và tên">
+    <input type="text" name="Username" placeholder="Tên đăng nhập" required>
 <i class="fa fa-user"></i>
 </div>
 
@@ -149,13 +149,14 @@ font-weight:bold;
 </div>
 
 <div class="input-group">
-<input type="password" name="ConfirmPassword" placeholder="Xác nhận mật khẩu">
-<i class="fa fa-lock"></i>
+    <input type="password" name="ConfirmPassword" placeholder="Xác nhận mật khẩu" required>
+    <i class="fa fa-lock"></i>
 </div>
 
-<button class="register-btn">
-Đăng Ký
-</button>
+<div id="registerError" class="text-danger mt-2" style="display:none;"></div>
+
+
+<button type="submit" class="register-btn">Đăng Ký</button>
 
 </form>
 
@@ -185,4 +186,5 @@ Google
 </div>
 
 </div>
+
 

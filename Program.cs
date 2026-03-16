@@ -82,7 +82,7 @@ using (var scope = app.Services.CreateScope())
     {
         context.Users.Add(new FastFood.Models.User
         {
-            Name = "Admin",          // THÊM DÒNG NÀY
+            Username = "admin",
             Email = "admin@fastfood.com",
             Password = "123",
             Role = "Admin"

@@ -21,51 +21,53 @@ namespace FastFood.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(string Email, string Password)
+        public IActionResult Login(string Username, string Password)
         {
             var user = _context.Users
-                .FirstOrDefault(x => x.Email == Email && x.Password == Password);
+                .FirstOrDefault(x => x.Username == Username && x.Password == Password);
 
-            if (user != null)
+            if (user == null)
             {
-                HttpContext.Session.SetString("UserEmail", user.Email);
-                HttpContext.Session.SetString("UserRole", user.Role);
-
-                // nếu là admin
-                if (user.Role == "Admin")
-                {
-                    return RedirectToAction("Index", "Dashboard", new { area = "Admin" });
-                }
-
-                // nếu là user
-                return RedirectToAction("Index", "Home");
+                return Json(new { success = false, message = "Sai tài khoản hoặc mật khẩu" });
             }
 
-            ViewBag.Error = "Sai email hoặc mật khẩu";
-            return View();
+            HttpContext.Session.SetString("UserEmail", user.Email);
+            HttpContext.Session.SetString("UserName", user.Username);
+            HttpContext.Session.SetString("UserRole", user.Role);
+
+            return Json(new { success = true });
         }
         
         public IActionResult Register()
         {
             return View();
         }
-
+        
         [HttpPost]
-        public IActionResult Register(User user)
+        public IActionResult Register(User user, string ConfirmPassword)
         {
-            user.Role = "User";   // mặc định user
+            if(user.Password != ConfirmPassword)
+            {
+                return Json(new { success = false, message = "Mật khẩu xác nhận không khớp" });
+            }
+
+            user.Role = "User";
 
             _context.Users.Add(user);
             _context.SaveChanges();
 
-            return RedirectToAction("Login");
+            return Json(new { success = true });
         }
 
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
-
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
+        }
+        
+        public IActionResult ExitDashboard()
+        {
+            return RedirectToAction("Index", "Home");
         }
     }
 }

@@ -284,3 +284,4 @@
 /Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/obj/Debug/net8.0/FastFood.pdb
 /Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/obj/Debug/net8.0/FastFood.genruntimeconfig.cache
 /Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/obj/Debug/net8.0/ref/FastFood.dll
+/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/obj/Debug/net8.0/FastFood.sourcelink.json
