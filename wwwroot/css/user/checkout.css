@@ -1,0 +1,233 @@
+/* FastFood Checkout Styles */
+
+:root {
+    --primary: #FF6B35;
+    --primary-dark: #E55A2B;
+    --primary-light: #FF8E60;
+    --secondary: #F8F9FA;
+    --dark: #2C3E50;
+    --dark-light: #34495E;
+    --success: #27AE60;
+    --warning: #F39C12;
+    --light: #ECF0F1;
+    --white: #FFFFFF;
+    --shadow: 0 10px 30px rgba(0,0,0,0.1);
+    --shadow-hover: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.fastfood-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* HERO */
+
+.checkout-hero {
+    text-align: center;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.checkout-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.checkout-hero p {
+    font-size: 1.1rem;
+    color: var(--dark-light);
+}
+
+/* CARD */
+
+.order-card,
+.delivery-card {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255,255,255,0.3);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.order-card:hover,
+.delivery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 1.5rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* FOOD ITEM */
+
+.food-item {
+    display: flex;
+    align-items: center;
+    padding: 1.3rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.food-item:last-child {
+    border-bottom: none;
+}
+
+.food-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-right: 1.2rem;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.food-info h6 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.qty {
+    color: var(--dark-light);
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+.food-note {
+    background: var(--light);
+    padding: 0.6rem 0.8rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary);
+    font-size: 0.9rem;
+}
+
+.note-label {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.price-tag {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-left: auto;
+}
+
+/* TOTAL */
+
+.total-section {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+.total-amount {
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;      /* CHỈNH THÀNH MÀU TRẮNG */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* FORM */
+
+.form-group {
+    margin-bottom: 1.4rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+/* TEXTBOX NHỎ LẠI */
+
+.big-input {
+    width: 100%;
+    padding: 0.7rem 0.9rem;   /* nhỏ hơn */
+    border: 2px solid #E9ECEF;
+    border-radius: 10px;      /* nhỏ hơn */
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.big-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(255,107,53,0.1);
+    background: white;
+}
+
+/* BUTTON */
+
+.order-btn {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.order-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+    .food-item{
+        flex-direction: column;
+        text-align:center;
+    }
+
+    .price-tag{
+        margin-top:10px;
+    }
+
+    .total-section{
+        text-align:center;
+    }
+
+}

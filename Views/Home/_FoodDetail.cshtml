@@ -1,0 +1,65 @@
+@model FastFood.Models.Food
+
+<div class="row">
+    <!-- IMAGE -->
+    <div class="col-md-5 text-center">
+        <img src="@Url.Content(Model.Image)"
+             class="img-fluid rounded"
+             style="max-width:260px; max-height:260px; object-fit:contain;">
+
+        <h2 id="foodPrice"
+            class="text-danger fw-bold mt-3"
+            data-price="@Model.Price">
+            @Model.Price.ToString("N0") đ
+        </h2>
+    </div>
+
+    <!-- INFO -->
+    <div class="col-md-7">
+
+        <h3 class="fw-bold">@Model.FoodName</h3>
+        <p class="text-muted">@Model.Description</p>
+
+        <hr>
+
+        <h5>Số lượng</h5>
+
+        <div class="d-flex align-items-center">
+
+            <button class="btn btn-outline-secondary"
+                    onclick="changeQty(-1)">
+                -
+            </button>
+
+            <input id="qty"
+                   type="text"
+                   value="1"
+                   class="form-control text-center mx-2"
+                   style="width:70px;"
+                   readonly>
+
+            <button class="btn btn-outline-secondary"
+                    onclick="changeQty(1)">
+                +
+            </button>
+
+        </div>
+
+        <hr>
+
+        <h4 class="text-success">
+            Tổng tiền:
+            <span id="totalPrice">
+                @Model.Price.ToString("N0") đ
+            </span>
+        </h4>
+
+        <textarea id="note" class="form-control mt-3" placeholder="Nhập ghi chú"></textarea>
+
+        <button class="btn btn-success w-100 mt-3"
+                onclick="addToCart(@Model.FoodId)">
+            Thêm vào giỏ
+        </button>
+
+    </div>
+</div>

@@ -1,0 +1,31 @@
+@model FastFood.Models.Food
+
+<div>
+
+    <div class="mb-3">
+        <label>Tên món</label>
+        <input class="form-control" value="@Model.FoodName" readonly />
+    </div>
+
+    <div class="mb-3">
+        <label>Giá gốc</label>
+        <input class="form-control" value="@Model.Price.ToString("N0") đ" readonly />
+    </div>
+
+    <div class="mb-3">
+        <label>% giảm giá</label>
+        <input class="form-control" value="@Model.DiscountPercent %" readonly />
+    </div>
+
+    <div class="mb-3">
+        <label>Giá sau giảm</label>
+        <input class="form-control" value="@Model.DiscountPrice.ToString("N0") đ" readonly />
+    </div>
+
+    <div class="mb-3">
+        <label>Ảnh</label><br>
+        <img src="@Model.Image"
+             style="width:200px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1)">
+    </div>
+
+</div>

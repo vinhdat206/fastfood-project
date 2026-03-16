@@ -1,0 +1,73 @@
+@model List<FastFood.Models.Order>
+
+<div class="container mt-5">
+    <div class="cart-box">
+
+        <div class="cart-header text-center">
+            <h2>📦 Lịch sử đơn hàng</h2>
+            <p>@Model.Count đơn hàng</p>
+        </div>
+
+        <table class="table cart-table">
+
+            <thead>
+            <tr>
+                <th>STT</th>
+                <th>Mã đơn</th>
+                <th>Ngày đặt</th>
+                <th>Tổng tiền</th>
+                <th>Số món</th>
+                <th>Trạng thái</th>
+                <th>Chi tiết</th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            @{
+                int stt = 1;
+            }
+
+            @foreach(var order in Model)
+            {
+                <tr>
+
+                    <td>@stt</td>
+
+                    <td>#@order.Id</td>
+
+                    <td>@order.OrderDate.ToString("dd/MM/yyyy HH:mm")</td>
+
+                    <td class="price">
+                        @order.TotalAmount.ToString("N0") VND
+                    </td>
+
+                    <td>
+                        @order.OrderDetails.Count món
+                    </td>
+
+                    <td>
+                        <span class="badge bg-warning">
+                            @order.Status
+                        </span>
+                    </td>
+
+                    <td>
+                        <a asp-action="Detail"
+                           asp-route-id="@order.Id"
+                           class="btn btn-primary btn-sm">
+                            Xem
+                        </a>
+                    </td>
+
+                </tr>
+
+                stt++;
+            }
+
+            </tbody>
+
+        </table>
+
+    </div>
+</div>

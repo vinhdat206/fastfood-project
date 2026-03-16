@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-FastFood-040599d3-7c62-4d80-be1a-c99dfd217d4b</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.23" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.23" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.23" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.25">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.23" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.25" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.25">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.23" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\images\Abouts\" />
+      <Folder Include="wwwroot\images\foods\burger\" />
+      <Folder Include="wwwroot\images\foods\chicken\" />
+      <Folder Include="wwwroot\images\foods\combo\" />
+      <Folder Include="wwwroot\images\foods\pizza\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Category\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Category\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Category\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Category\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Category\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\45KG\g1.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\45KG\g10.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\45KG\g11.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\45KG\g2.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\45KG\g3.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\45KG\g4.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\45KG\g5.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\45KG\g6.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\45KG\g7.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\45KG\g8.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\45KG\g9.jpg" />
+    </ItemGroup>
+
+</Project>

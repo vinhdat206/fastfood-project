@@ -1,0 +1,78 @@
+@model List<FastFood.Models.OrderDetail>
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">📦 Chi tiết đơn hàng</h2>
+
+    <table class="table table-bordered align-middle">
+
+        <thead class="table-light">
+        <tr>
+            <th>Ảnh</th>
+            <th>Món</th>
+            <th>Số lượng</th>
+            <th>Ghi chú</th>
+            <th>Giá</th>
+            <th>Thành tiền</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        @{
+            decimal total = 0;
+        }
+
+        @foreach (var item in Model)
+        {
+            decimal itemTotal = item.Price * item.Quantity;
+            total += itemTotal;
+
+            <tr>
+
+                <td style="width:80px">
+                    <img src="@Url.Content(item.Food.Image)"
+                         style="width:60px;height:60px;object-fit:cover;border-radius:8px;">
+                </td>
+
+                <td>@item.Food.FoodName</td>
+
+                <td>@item.Quantity</td>
+
+                <td>
+                    @if(!string.IsNullOrEmpty(item.Note))
+                    {
+                        <span class="text-muted">📝 @item.Note</span>
+                    }
+                    else
+                    {
+                        <span>-</span>
+                    }
+                </td>
+
+                <td>@item.Price.ToString("N0") đ</td>
+
+                <td class="text-danger fw-bold">
+                    @itemTotal.ToString("N0") đ
+                </td>
+
+            </tr>
+        }
+
+        </tbody>
+
+    </table>
+
+    <div class="text-end mt-3">
+
+        <h4 class="text-danger">
+            Tổng tiền: @total.ToString("N0") đ
+        </h4>
+
+    </div>
+
+    <a href="/Order/History" class="btn btn-secondary mt-3">
+        ← Quay lại lịch sử đơn
+    </a>
+
+</div>

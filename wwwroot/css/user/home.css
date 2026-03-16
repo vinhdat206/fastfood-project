@@ -1,0 +1,137 @@
+/* ================= PRODUCT CARD ================= */
+
+.product-card{
+    border:none;
+    border-radius:12px;
+    overflow:hidden;
+    transition:0.3s;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+}
+
+.product-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+
+/* ================= IMAGE ================= */
+
+.product-img{
+    width:100%;
+    height:220px;
+    overflow:hidden;
+}
+
+.product-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.35s;
+}
+
+.product-card:hover img{
+    transform:scale(1.06);
+}
+
+
+/* ================= TEXT ================= */
+
+.product-divider{
+    margin:0;
+    border:none;
+    height:2px;
+    background:#eee;
+}
+
+.card-body h6{
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.buy-now-btn{
+    display:inline-block;
+    padding:8px 18px;
+    border:2px solid #198754;
+    border-radius:25px;
+    color:#198754;
+    font-weight:600;
+    background:white;
+    transition:0.25s;
+}
+
+.buy-now-btn:hover{
+    background:#198754;
+    color:white;
+}
+
+
+/* ================= SALE BADGE ================= */
+
+.sale-badge{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:#dc3545;
+    color:white;
+    font-size:12px;
+    padding:4px 10px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+
+/* ================= COMBO BADGE ================= */
+
+.combo-badge{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:#198754;
+    color:white;
+    font-size:12px;
+    padding:4px 10px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+
+/* ================= DISCOUNT BADGE ================= */
+
+.discount-badge{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:#ffc107;
+    color:black;
+    font-size:12px;
+    padding:4px 8px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+
+/* ================= REVIEW CARD ================= */
+
+.card p{
+    font-size:14px;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal-content{
+    border-radius:15px;
+    border:none;
+}
+
+.modal-body{
+    padding:25px;
+}
+
+
+/* ================= TOAST ================= */

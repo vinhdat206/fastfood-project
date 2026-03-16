@@ -1,0 +1,61 @@
+@model List<FastFood.Models.Order>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+@section Styles{
+    <link rel="stylesheet" href="~/css/admin/oders/index.css" />
+}
+<div class="orders-container">
+    <div class="orders-header">
+        <h1>Orders Management</h1>
+        <div class="stats">
+            <span class="stat-item">Total: @Model.Count orders</span>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="orders-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model)
+                {
+                    <tr>
+                        <td class="order-id">#@order.Id</td>
+                        <td class="customer-name">@order.CustomerName</td>
+                        <td class="total-amount">@order.TotalAmount.ToString("N0") đ</td>
+                        <td class="status status-@order.Status.ToString().ToLower()">
+                            @order.Status
+                        </td>
+                        <td class="actions">
+                            <a href="/Admin/Orders/Details/@order.Id" class="btn btn-view" title="View Details">
+                                👁
+                            </a>
+                            <a href="/Admin/Orders/UpdateStatus/@order.Id?status=Cooking" 
+                               class="btn btn-status cooking" title="Set to Cooking">
+                                Cooking
+                            </a>
+                            <a href="/Admin/Orders/UpdateStatus/@order.Id?status=Delivering" 
+                               class="btn btn-status delivering" title="Set to Delivering">
+                                Delivering
+                            </a>
+                            <a href="/Admin/Orders/UpdateStatus/@order.Id?status=Done" 
+                               class="btn btn-status done" title="Set to Done">
+                                Done
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

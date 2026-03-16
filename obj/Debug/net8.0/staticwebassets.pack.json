@@ -1,0 +1,525 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/obj/Debug/net8.0/scopedcss/projectbundle/FastFood.bundle.scp.css",
+      "PackagePath": "staticwebassets/FastFood.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/Menu.css",
+      "PackagePath": "staticwebassets/css/Menu.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/admin/food/create.css",
+      "PackagePath": "staticwebassets/css/admin/food/create.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/admin/food/edit.css",
+      "PackagePath": "staticwebassets/css/admin/food/edit.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/admin/food/index.css",
+      "PackagePath": "staticwebassets/css/admin/food/index.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/admin/oders/index.css",
+      "PackagePath": "staticwebassets/css/admin/oders/index.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/admin/site.css",
+      "PackagePath": "staticwebassets/css/admin/site.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/cart.css",
+      "PackagePath": "staticwebassets/css/cart.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/checkout.css",
+      "PackagePath": "staticwebassets/css/checkout.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/home.css",
+      "PackagePath": "staticwebassets/css/home.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/Abouts/about1.png",
+      "PackagePath": "staticwebassets/images/Abouts/about1.png"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/Abouts/about2.png",
+      "PackagePath": "staticwebassets/images/Abouts/about2.png"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/Abouts/about3.png",
+      "PackagePath": "staticwebassets/images/Abouts/about3.png"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/Abouts/about4.png",
+      "PackagePath": "staticwebassets/images/Abouts/about4.png"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/Logo/Logo.PNG",
+      "PackagePath": "staticwebassets/images/Logo/Logo.PNG"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/banners/banner-new.png",
+      "PackagePath": "staticwebassets/images/banners/banner-new.png"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/7up.jpg",
+      "PackagePath": "staticwebassets/images/drink/7up.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/coca.jpg",
+      "PackagePath": "staticwebassets/images/drink/coca.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/fanta.jpg",
+      "PackagePath": "staticwebassets/images/drink/fanta.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/lavie.jpg",
+      "PackagePath": "staticwebassets/images/drink/lavie.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/mirinda.jpg",
+      "PackagePath": "staticwebassets/images/drink/mirinda.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/monster.jpg",
+      "PackagePath": "staticwebassets/images/drink/monster.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/pepsi.jpg",
+      "PackagePath": "staticwebassets/images/drink/pepsi.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/sprite.jpg",
+      "PackagePath": "staticwebassets/images/drink/sprite.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/sting.jpg",
+      "PackagePath": "staticwebassets/images/drink/sting.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/strongbow.jpg",
+      "PackagePath": "staticwebassets/images/drink/strongbow.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/burger/BBQ-Bacon-Burgers.jpg",
+      "PackagePath": "staticwebassets/images/foods/burger/BBQ-Bacon-Burgers.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/burger/burger-bo-2-lop.jpg",
+      "PackagePath": "staticwebassets/images/foods/burger/burger-bo-2-lop.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/burger/burger-bo-pho-mai.jpg",
+      "PackagePath": "staticwebassets/images/foods/burger/burger-bo-pho-mai.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/burger/burger-bo.jpg",
+      "PackagePath": "staticwebassets/images/foods/burger/burger-bo.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/burger/burger-ca.jpg",
+      "PackagePath": "staticwebassets/images/foods/burger/burger-ca.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/burger/burger-ga-cay.jpg",
+      "PackagePath": "staticwebassets/images/foods/burger/burger-ga-cay.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/burger/burger-ga-pho-mai.jpg",
+      "PackagePath": "staticwebassets/images/foods/burger/burger-ga-pho-mai.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/burger/burger-ga.jpg",
+      "PackagePath": "staticwebassets/images/foods/burger/burger-ga.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/burger/burger-thit-heo.jpg",
+      "PackagePath": "staticwebassets/images/foods/burger/burger-thit-heo.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/burger/burger-tom.jpg",
+      "PackagePath": "staticwebassets/images/foods/burger/burger-tom.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/chicken/canh-ga-ran.jpg",
+      "PackagePath": "staticwebassets/images/foods/chicken/canh-ga-ran.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/chicken/dui-ga-ran.jpg",
+      "PackagePath": "staticwebassets/images/foods/chicken/dui-ga-ran.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/chicken/ga-ran-sot-bbq.jpg",
+      "PackagePath": "staticwebassets/images/foods/chicken/ga-ran-sot-bbq.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/chicken/ga-ran-sot-mat-ong.jpg",
+      "PackagePath": "staticwebassets/images/foods/chicken/ga-ran-sot-mat-ong.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/chicken/ga-ran-sot-mu-tat-vang.jpg",
+      "PackagePath": "staticwebassets/images/foods/chicken/ga-ran-sot-mu-tat-vang.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/chicken/ga-ran-sot-pho-mai.jpg",
+      "PackagePath": "staticwebassets/images/foods/chicken/ga-ran-sot-pho-mai.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/chicken/ga-sot-han-quoc.jpg",
+      "PackagePath": "staticwebassets/images/foods/chicken/ga-sot-han-quoc.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/chicken/ga-sot-kem-hanh.jpg",
+      "PackagePath": "staticwebassets/images/foods/chicken/ga-sot-kem-hanh.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/chicken/ga-sot-teriyaki.jpg",
+      "PackagePath": "staticwebassets/images/foods/chicken/ga-sot-teriyaki.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/chicken/ga-vien.jpg",
+      "PackagePath": "staticwebassets/images/foods/chicken/ga-vien.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/combo/combo-2-burger.jpg",
+      "PackagePath": "staticwebassets/images/foods/combo/combo-2-burger.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/combo/combo-2-pizza.jpg",
+      "PackagePath": "staticwebassets/images/foods/combo/combo-2-pizza.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/combo/combo-burger-pizza.jpg",
+      "PackagePath": "staticwebassets/images/foods/combo/combo-burger-pizza.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/combo/combo-ga-2.jpg",
+      "PackagePath": "staticwebassets/images/foods/combo/combo-ga-2.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/combo/combo-ga-3.jpg",
+      "PackagePath": "staticwebassets/images/foods/combo/combo-ga-3.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/combo/combo-ga-4.jpg",
+      "PackagePath": "staticwebassets/images/foods/combo/combo-ga-4.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/combo/combo-ga-5.jpg",
+      "PackagePath": "staticwebassets/images/foods/combo/combo-ga-5.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/combo/combo-ga-burger.jpg",
+      "PackagePath": "staticwebassets/images/foods/combo/combo-ga-burger.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/combo/combo-ga.jpg",
+      "PackagePath": "staticwebassets/images/foods/combo/combo-ga.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/combo/combo-mix-vi-pizza.jpg",
+      "PackagePath": "staticwebassets/images/foods/combo/combo-mix-vi-pizza.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/pizza/pizza-bo-bam.jpg",
+      "PackagePath": "staticwebassets/images/foods/pizza/pizza-bo-bam.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/pizza/pizza-ca-ngu.jpg",
+      "PackagePath": "staticwebassets/images/foods/pizza/pizza-ca-ngu.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/pizza/pizza-ga-nuong.jpg",
+      "PackagePath": "staticwebassets/images/foods/pizza/pizza-ga-nuong.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/pizza/pizza-hai-san.jpg",
+      "PackagePath": "staticwebassets/images/foods/pizza/pizza-hai-san.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/pizza/pizza-pepperoni.jpg",
+      "PackagePath": "staticwebassets/images/foods/pizza/pizza-pepperoni.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/pizza/pizza-pho-mai-cao-cap.jpg",
+      "PackagePath": "staticwebassets/images/foods/pizza/pizza-pho-mai-cao-cap.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/pizza/pizza-rau-cu.jpg",
+      "PackagePath": "staticwebassets/images/foods/pizza/pizza-rau-cu.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/pizza/pizza-thap-cam.jpg",
+      "PackagePath": "staticwebassets/images/foods/pizza/pizza-thap-cam.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/pizza/pizza-truyen-thong.jpg",
+      "PackagePath": "staticwebassets/images/foods/pizza/pizza-truyen-thong.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/pizza/pizza-xuc-xich.jpg",
+      "PackagePath": "staticwebassets/images/foods/pizza/pizza-xuc-xich.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.FastFood.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.FastFood.props",
+      "PackagePath": "build\\FastFood.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.FastFood.props",
+      "PackagePath": "buildMultiTargeting\\FastFood.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.FastFood.props",
+      "PackagePath": "buildTransitive\\FastFood.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

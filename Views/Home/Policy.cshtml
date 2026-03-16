@@ -1,0 +1,143 @@
+﻿@{
+    ViewData["Title"] = "Chính sách";
+}
+
+@section Styles{
+<style>
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.policy-sections{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+    margin-top:40px;
+}
+
+.policy-card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.policy-card:hover{
+    transform:translateY(-8px);
+}
+
+.policy-icon{
+    font-size:28px;
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.policy-detail{
+    display:none;
+    margin-top:15px;
+}
+
+.policy-detail.active{
+    display:block;
+}
+
+</style>
+}
+
+<div class="hero">
+    <h1>🛡 Chính sách & Điều khoản</h1>
+    <p>Thông tin về bảo mật, vận chuyển và quyền lợi khách hàng</p>
+</div>
+
+<div class="container">
+
+<div class="policy-sections">
+
+<div class="policy-card" onclick="togglePolicy(this)">
+<div class="policy-icon">🔒</div>
+<h3>Chính sách bảo mật</h3>
+<p>Bảo vệ thông tin cá nhân khách hàng</p>
+
+<div class="policy-detail">
+<ul>
+<li>Không chia sẻ thông tin cho bên thứ 3</li>
+<li>Dữ liệu được mã hóa</li>
+<li>Chỉ sử dụng cho mục đích đặt hàng</li>
+</ul>
+</div>
+</div>
+
+<div class="policy-card" onclick="togglePolicy(this)">
+<div class="policy-icon">📄</div>
+<h3>Điều khoản dịch vụ</h3>
+<p>Quy định khi sử dụng website</p>
+
+<div class="policy-detail">
+<ul>
+<li>Khách hàng phải cung cấp thông tin chính xác</li>
+<li>Không sử dụng website cho mục đích xấu</li>
+<li>Chúng tôi có quyền từ chối đơn hàng vi phạm</li>
+</ul>
+</div>
+</div>
+
+<div class="policy-card" onclick="togglePolicy(this)">
+<div class="policy-icon">🔄</div>
+<h3>Chính sách đổi trả</h3>
+
+<div class="policy-detail">
+<ul>
+<li>Đổi trả trong 24h nếu món lỗi</li>
+<li>Hoàn tiền nếu giao sai món</li>
+</ul>
+</div>
+</div>
+
+<div class="policy-card" onclick="togglePolicy(this)">
+<div class="policy-icon">🚚</div>
+<h3>Chính sách vận chuyển</h3>
+
+<div class="policy-detail">
+<ul>
+<li>Giao hàng 30‑60 phút</li>
+<li>Miễn phí ship đơn > 200k</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+</div>
+
+@section Scripts{
+<script>
+
+function togglePolicy(card){
+
+let detail = card.querySelector(".policy-detail");
+
+if(detail.classList.contains("active")){
+detail.classList.remove("active");
+}else{
+
+document.querySelectorAll(".policy-detail").forEach(x=>{
+x.classList.remove("active");
+});
+
+detail.classList.add("active");
+}
+
+}
+
+</script>
+}

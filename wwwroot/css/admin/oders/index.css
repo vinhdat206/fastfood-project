@@ -1,0 +1,157 @@
+.orders-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f4f7fb;
+    min-height: 100vh;
+}
+
+.orders-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.orders-header h1 {
+    margin: 0;
+    color: #334155;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.stats {
+    font-size: 0.95rem;
+    color: #64748b;
+}
+
+.stat-item {
+    background: #eef2f7;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.table-responsive {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+/* Header bảng giảm màu */
+.orders-table th {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    color: white;
+    padding: 16px 18px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.orders-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+}
+
+.orders-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.order-id {
+    font-weight: 600;
+    color: #3b82f6;
+}
+
+.customer-name {
+    font-weight: 500;
+    color: #334155;
+}
+
+.total-amount {
+    font-weight: 600;
+    color: #16a34a;
+}
+
+/* STATUS nhẹ hơn */
+.status {
+    padding: 5px 10px;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-pending {
+    
+    color: #b45309;
+}
+
+.status-cooking {
+   
+    color: #92400e;
+}
+
+.status-delivering {
+    
+    color: #065f46;
+}
+
+.status-done {
+    
+    color: #5b21b6;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Button */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: 0.2s;
+}
+
+.btn-view {
+    background: #6b7280;
+    color: white;
+}
+
+.btn-view:hover {
+    background: #4b5563;
+}
+
+.btn-status {
+    color: white;
+    min-width: 75px;
+    justify-content: center;
+}
+
+/* Button màu nhẹ hơn */
+.btn-status.cooking {
+    background: #f59e0b;
+}
+
+.btn-status.delivering {
+    background: #10b981;
+}
+
+.btn-status.done {
+    background: #8b5cf6;
+}

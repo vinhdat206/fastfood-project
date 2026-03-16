@@ -1,0 +1,15 @@
+@model Microsoft.AspNetCore.Identity.IdentityUser
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>User Details</h2>
+
+<p><b>ID:</b> @Model.Id</p>
+
+<p><b>Email:</b> @Model.Email</p>
+
+<p><b>UserName:</b> @Model.UserName</p>
+
+<a href="/Admin/Users/Index">Back</a>

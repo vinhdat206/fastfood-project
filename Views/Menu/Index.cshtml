@@ -1,0 +1,296 @@
+@model IEnumerable<FastFood.Models.Food>
+@section Styles{
+     <link rel="stylesheet" href="~/css/user/Menu.css" />
+}
+
+<div class="container mt-5 menu-page">
+
+<h1 class="text-center mb-4">🍔 Thực đơn FastFood</h1>
+
+<!-- MENU FILTER -->
+
+<ul class="nav nav-pills justify-content-center mb-4" id="menuTabs">
+
+<li class="nav-item">
+<a class="nav-link active" onclick="filterFood('all', event)">Tất cả</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" onclick="filterFood('burger', event)">Burger</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" onclick="filterFood('pizza', event)">Pizza</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" onclick="filterFood('chicken', event)">Chicken</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" onclick="filterFood('drink', event)">Drink</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" onclick="filterFood('combo', event)">Combo</a>
+</li>
+
+</ul>
+
+
+<!-- PRODUCT LIST -->
+
+<div class="row">
+
+@if (Model != null)
+{
+foreach (var item in Model)
+{
+
+<div class="col-lg-3 col-md-4 col-6 mb-4 food-item"
+     data-category="@item.CategoryId">
+
+     <div class="card product-card shadow-sm"
+          onclick="openFood(@item.FoodId)"
+          style="cursor:pointer">
+          
+
+          <div class="product-img">
+
+               <img src="@Url.Content(item.Image)" alt="@item.FoodName">
+
+          </div>
+
+          <hr class="product-divider">
+
+          <div class="card-body text-center">
+
+               <h6>@item.FoodName</h6>
+
+               <p class="text-danger fw-bold">
+                    @item.Price.ToString("N0") đ
+               </p>
+
+               <button class="buy-now-btn"
+                       onclick="addToCart(@item.FoodId)">
+                    Thêm vào giỏ
+               </button>
+
+          </div>
+
+     </div>
+
+</div>
+
+}
+}
+
+</div>
+
+</div>
+
+
+<!-- FILTER SCRIPT -->
+
+<script>
+
+function filterFood(type, event){
+
+let foods = document.querySelectorAll(".food-item");
+let tabs = document.querySelectorAll("#menuTabs .nav-link");
+
+/* active tab */
+
+tabs.forEach(tab => tab.classList.remove("active"));
+event.target.classList.add("active");
+
+/* filter product */
+
+foods.forEach(food => {
+
+let category = food.dataset.category;
+
+if(type == "all"){
+food.style.display = "";
+}
+
+else if(type == "burger" && category == "1"){
+food.style.display = "";
+}
+
+else if(type == "pizza" && category == "2"){
+food.style.display = "";
+}
+
+else if(type == "chicken" && category == "3"){
+food.style.display = "";
+}
+
+else if(type == "drink" && category == "4"){
+food.style.display = "";
+}
+
+else if(type == "combo" && category == "5"){
+food.style.display = "";
+}
+
+else{
+food.style.display = "none";
+}
+
+});
+
+}
+
+</script>
+
+<!--POPUP-->
+
+
+<!-- POPUP MODAL -->
+<div class="modal fade" id="foodModal" tabindex="-1">
+
+     <div class="modal-dialog modal-lg modal-dialog-centered">
+
+          <div class="modal-content">
+
+               <div class="modal-body" id="foodModalBody">
+               </div>
+
+          </div>
+
+     </div>
+
+</div>
+
+
+<script>
+
+function openFood(id){
+
+fetch('/Menu/FoodDetail/' + id)
+
+.then(res => res.text())
+
+.then(html => {
+
+document.getElementById("foodModalBody").innerHTML = html;
+
+var modal = new bootstrap.Modal(
+document.getElementById('foodModal')
+);
+
+modal.show();
+
+});
+
+}
+function changeQty(num){
+
+    let qtyInput = document.getElementById("qty");
+
+    if(!qtyInput) return;
+
+    let qty = parseInt(qtyInput.value);
+
+    qty += num;
+
+    if(qty < 1) qty = 1;
+
+    qtyInput.value = qty;
+
+    updatePrice();
+
+}
+
+function updatePrice(){
+
+    let priceElement = document.getElementById("foodPrice");
+
+    if(!priceElement) return;
+
+    let basePrice = parseFloat(priceElement.dataset.price); // giá gốc
+
+    let qty = parseInt(document.getElementById("qty").value);
+
+    let total = basePrice * qty; // luôn tính lại từ giá gốc
+
+    document.getElementById("totalPrice").innerText =
+        total.toLocaleString('vi-VN') + " đ";
+
+}
+function addToCart(id) {
+
+     let qtyInput = document.getElementById("qty");
+     let qty = qtyInput ? qtyInput.value : 1;
+
+     let noteInput = document.getElementById("note");
+     let note = noteInput ? noteInput.value : "";
+
+     fetch('/Cart/AddToCart?id=' + id + '&qty=' + qty + '&note=' + encodeURIComponent(note))
+          .then(response => {
+
+               if (response.redirected) {
+
+                    showToast("⚠️ Bạn cần đăng nhập để mua hàng");
+
+                    // đóng popup sản phẩm
+                    var foodModal = bootstrap.Modal.getInstance(document.getElementById('foodModal'));
+                    if(foodModal){
+                         foodModal.hide();
+                    }
+
+                    // mở popup login
+                    setTimeout(()=>{
+                         openLogin();
+                    },300);
+
+                    return;
+               }
+
+               if(response.ok){
+
+                    showToast("✅ Đã thêm vào giỏ hàng");
+
+                    updateCartCount();
+
+               }
+
+          });
+}
+
+
+function updateCartCount(){
+
+     fetch('/Cart/GetCartCount')
+          .then(res => res.text())
+          .then(count => {
+
+               let cart = document.getElementById("cartCount");
+
+               if(cart){
+                    cart.innerText = count;
+               }
+
+          });
+
+}
+
+
+function showToast(message){
+
+     var toast = document.createElement("div");
+
+     toast.className = "toast-msg";
+
+     toast.innerText = message;
+
+     document.getElementById("toastBox").appendChild(toast);
+
+     setTimeout(()=>{
+          toast.remove();
+     },3000);
+
+}
+
+</script>

@@ -1,0 +1,101 @@
+@model List<FastFood.Models.CartItem>
+@section Styles{
+    <link rel="stylesheet" href="~/css/user/checkout.css" asp-append-version="true" />
+}
+
+
+
+<div class="fastfood-container">
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="checkout-hero">
+            <h1>🍔 Đặt Hàng Nhanh</h1>
+            <p>Chỉ còn vài bước nữa là bạn có thể thưởng thức món ngon yêu thích!</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- ĐƠN HÀNG -->
+            <div class="col-lg-7">
+                <div class="order-card">
+                    <div class="card-header">
+                        🛒 Giỏ hàng của bạn
+                    </div>
+                    <div class="p-4">
+                        @{
+                            decimal total = 0;
+                        }
+                        @foreach (var item in Model)
+                        {
+                            decimal itemTotal = item.Price * item.Quantity;
+                            total += itemTotal;
+
+                            <div class="food-item">
+                                <div class="food-image">
+                                    <img src="@Url.Content(item.Image)" alt="@item.FoodName">
+                                </div>
+                                <div class="food-info flex-grow-1">
+                                    <h6>@item.FoodName</h6>
+                                    <div class="qty">SL: @item.Quantity</div>
+                                    @if (!string.IsNullOrEmpty(item.Note))
+                                    {
+                                        <div class="food-note">
+                                            <span class="note-label">Ghi chú:</span> @item.Note
+                                        </div>
+                                    }
+                                </div>
+                                <div class="price-tag">
+                                    @itemTotal.ToString("N0")đ
+                                </div>
+                            </div>
+                        }
+                        
+                        <!-- Total Section -->
+                        <div class="total-section">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span style="font-size: 1.3rem; font-weight: 700; color: var(--primary-);">Tổng tiền:</span>
+                                <div>
+                                    <div class="total-amount">@total.ToString("N0")đ</div>
+                                    <small class="text-muted">(Chưa bao gồm phí ship)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORM GIAO HÀNG -->
+            <div class="col-lg-5">
+                <div class="delivery-card">
+                    <div class="card-header">
+                        📦 Giao tới
+                    </div>
+                    <div class="p-4">
+                        <form asp-action="Checkout" method="post">
+
+                            <div class="form-group">
+                                <label for="name">Họ tên</label>
+                                <input name="name" type="text" class="form-control big-input" id="name" placeholder="Tên" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Số điện thoại</label>
+                                <input name="phone" type="tel" class="form-control big-input" id="phone" placeholder="SĐT" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address">Địa chỉ giao hàng</label>
+                                <input name="address" type="text" class="form-control big-input" id="address" placeholder="Địa chỉ" required>
+                            </div>
+                            
+                            <button type="submit" class="order-btn w-100">
+                                🚀 ĐẶT HÀNG NGAY
+                                <span class="delivery-icon">⚡</span>
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

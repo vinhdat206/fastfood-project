@@ -1,0 +1,247 @@
+@model List<FastFood.Models.Food>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    
+}
+@section Styles{
+    <link rel="stylesheet" href="~/css/admin/food/index.css" />
+}
+<div class="page">
+    <div class="header-section">
+        <h1 class="title">
+            <i class="fas fa-utensils"></i>
+            Foods Management
+        </h1>
+        <div class="header-actions">
+            <button class="btn-add" onclick="openCreateFood()">
+                <i class="fas fa-plus"></i> Add New Food
+            </button>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <div class="table-header">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search foods..." class="search-input">
+            </div>
+            <div class="stats">
+                <span class="stat-item">@Model.Count() Foods</span>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="th-content">
+                            <span>Food</span>
+                            <i class="fas fa-sort sort-icon"></i>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="th-content">
+                            <span>Price</span>
+                            <i class="fas fa-sort sort-icon"></i>
+                        </div>
+                    </th>
+                    <th>Description</th>
+                    <th>Image</th>
+                    <th>
+                        <div class="th-content">
+                            <span>Category</span>
+                            <i class="fas fa-sort sort-icon"></i>
+                        </div>
+                    </th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="food-row">
+                        <td class="food-info">
+                            <img src="@item.Image" class="food-preview" alt="@item.FoodName" onerror="this.src='/images/no-image.png'">
+                            <div class="food-details">
+                                <div class="food-name">@item.FoodName</div>
+                                <div class="food-id">ID: @item.FoodId</div>
+                            </div>
+                        </td>
+                        <td class="price">
+                            <span class="price-value">@item.Price.ToString("N0")</span>
+                            <span class="currency">đ</span>
+                        </td>
+                        <td class="description" title="@item.Description">
+                            @Html.Raw(item.Description?.Length > 60 ? item.Description.Substring(0, 60) + "..." : item.Description)
+                        </td>
+                        <td class="image-cell">
+                            <img src="@item.Image" class="table-image" alt="@item.FoodName" onerror="this.src='/images/no-image.png'">
+                        </td>
+                        <td class="category">
+                            <span class="category-tag category-@item.CategoryId">@item.CategoryId</span>
+                        </td>
+                        <td class="actions">
+                            <div class="action-buttons">
+                                <a href="#" onclick="openEditFood(@item.FoodId)" class="btn-edit">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="/Admin/Foods/Delete/@item.FoodId" class=" btn-delete" title="Delete" onclick="return confirm('Are you sure?')">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                                <a href="#" onclick="openViewFood(@item.FoodId)" class="btn-view" title="View">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+
+        @if (!Model.Any())
+        {
+            <div class="empty-state">
+                <i class="fas fa-utensils empty-icon"></i>
+                <h3>No foods found</h3>
+                <p>Add your first food to get started</p>
+                <a href="/Admin/Foods/Create" class="btn-add">Add First Food</a>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+
+
+
+<!-- CREATE FOOD POPUP -->
+
+
+<!-- FOOD POPUP -->
+<div class="modal fade" id="foodModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Food</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body" id="foodModalBody">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+    
+
+
+    function openCreateFood(){
+
+        fetch('/Admin/Foods/Create')
+            .then(res => res.text())
+            .then(html => {
+
+                document.getElementById("foodModalBody").innerHTML = html;
+
+                var modal = new bootstrap.Modal(
+                    document.getElementById('foodModal')
+                );
+
+                modal.show();
+
+            });
+
+    }
+
+
+    function openEditFood(id){
+
+        fetch('/Admin/Foods/Edit/' + id)
+            .then(res => res.text())
+            .then(html => {
+
+                document.getElementById("foodModalBody").innerHTML = html;
+
+                var modal = new bootstrap.Modal(
+                    document.getElementById('foodModal')
+                );
+
+                modal.show();
+
+            });
+
+    }
+
+    function openViewFood(id){
+
+        fetch('/Admin/Foods/Details/' + id)
+            .then(res => res.text())
+            .then(html => {
+
+                document.getElementById("foodModalBody").innerHTML = html;
+
+                var modal = new bootstrap.Modal(
+                    document.getElementById('foodModal')
+                );
+
+                modal.show();
+
+            });
+
+    }
+
+    // Add some interactivity
+    document.addEventListener('DOMContentLoaded', function () {
+
+        const searchInput = document.querySelector('.search-input');
+        const rows = document.querySelectorAll('.food-row');
+
+        searchInput.addEventListener('input', function(e){
+
+            const term = e.target.value.toLowerCase();
+
+            rows.forEach(row => {
+
+                const foodName = row.querySelector('.food-name')?.textContent.toLowerCase();
+                const description = row.querySelector('.description')?.textContent.toLowerCase();
+
+                if (foodName?.includes(term) || description?.includes(term)) {
+                    row.style.display = '';
+                }
+                else{
+                    row.style.display = 'none';
+                }
+
+            });
+
+        });
+
+    });
+
+    document.addEventListener("input", function(e){
+
+        if(e.target.id === "price" || e.target.id === "discount"){
+
+            let price = parseFloat(document.getElementById("price")?.value) || 0;
+            let discount = parseFloat(document.getElementById("discount")?.value) || 0;
+
+            let final = price - (price * discount / 100);
+
+            let finalInput = document.getElementById("finalPrice");
+
+            if(finalInput){
+                finalInput.value = Math.round(final);
+            }
+
+        }
+
+    });
+</script>

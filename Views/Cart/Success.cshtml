@@ -1,0 +1,114 @@
+@{
+    ViewData["Title"] = "Đặt hàng thành công";
+    Layout = "_Layout";
+}
+
+<style>
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.success-container {
+    background: rgba(255,255,255,0.95);
+    border-radius:20px;
+    padding:3rem 2rem;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(0,0,0,0.1);
+    max-width:500px;
+    margin:80px auto;
+}
+
+.success-icon{
+    width:100px;
+    height:100px;
+    margin:auto;
+    background:linear-gradient(45deg,#4CAF50,#45a049);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.checkmark{
+    width:40px;
+    height:20px;
+    border:5px solid white;
+    border-top:none;
+    border-right:none;
+    transform:rotate(-45deg);
+}
+
+.btn-success-page{
+    background:linear-gradient(45deg,#4CAF50,#45a049);
+    color:white;
+    padding:12px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    margin:10px;
+    display:inline-block;
+}
+
+.btn-success-page:hover{
+    opacity:0.9;
+}
+
+.timer{
+    margin-top:15px;
+    color:#27ae60;
+    font-weight:bold;
+}
+</style>
+
+<div class="success-container">
+
+    <div class="success-icon">
+        <div class="checkmark"></div>
+    </div>
+
+    <h1>🎉 Đặt hàng thành công!</h1>
+
+    <p>Đơn hàng của bạn đã được ghi nhận.</p>
+
+    <div style="background:#e8f5e8;padding:15px;border-radius:10px;margin:20px 0;">
+        ✔ Đơn hàng đã được tạo<br>
+        ✔ Nhà hàng đang chuẩn bị món<br>
+        ✔ Bạn sẽ nhận được sớm
+    </div>
+
+    <div>
+
+        <a href="/" class="btn-success-page">Về Trang Chủ</a>
+
+        <a href="/Menu" class="btn-success-page">Đặt thêm món</a>
+
+    </div>
+
+    <div class="timer">
+        Tự động quay lại trang chủ sau <span id="countdown">5</span>s
+    </div>
+
+</div>
+
+<script>
+
+let time = 5;
+
+let countdown = document.getElementById("countdown");
+
+let timer = setInterval(function(){
+
+time--;
+
+countdown.innerText = time;
+
+if(time <= 0){
+
+clearInterval(timer);
+
+window.location.href = "/";
+
+}
+
+},1000);
+
+</script>

@@ -1,0 +1,46 @@
+@model FastFood.Models.Food
+<link rel="stylesheet" href="~/css/admin/food/create.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+
+    <div class="mb-3">
+        <label>Tên món</label>
+        <input asp-for="FoodName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Giá gốc</label>
+        <input asp-for="Price" id="price" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>% giảm giá</label>
+        <input asp-for="DiscountPercent" id="discount" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Giá sau giảm</label>
+        <input asp-for="DiscountPrice" id="finalPrice" class="form-control" readonly />
+    </div>
+
+    <div class="mb-3">
+        <label>Upload ảnh</label>
+        <input type="file" name="ImageFile" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Hoặc link ảnh</label>
+        <input asp-for="Image" class="form-control" placeholder="Ví dụ: /images/burger.jpg hoặc https://abc.com/burger.jpg" />
+
+        <small class="text-muted">
+            💡 Có thể nhập link ảnh từ internet hoặc đường dẫn trong thư mục <b>/images</b>
+        </small>
+    </div>
+
+    <button class="btn btn-success w-100 d-flex justify-content-center">
+        Lưu
+    </button>
+
+</form>

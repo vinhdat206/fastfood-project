@@ -1,0 +1,166 @@
+/* ===== NAVBAR ===== */
+
+.navbar{
+  padding:10px 0;
+}
+
+.main-menu .nav-link{
+  position:relative;
+  font-weight:500;
+  margin:0 12px;
+  transition:0.3s;
+}
+
+/* hover chữ đỏ */
+.main-menu .nav-link:hover{
+  color:#dc3545;
+}
+
+/* gạch đỏ mặc định */
+.main-menu .nav-link:not(.dropdown-toggle)::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:0;
+  height:2px;
+  background:#dc3545;
+  transition:0.3s;
+}
+
+/* hover chạy gạch đỏ */
+.main-menu .nav-link:not(.dropdown-toggle):hover::after{
+  width:100%;
+}
+
+/* ===== ACTIVE MENU ===== */
+
+.main-menu .active-menu{
+  color:#dc3545 !important;
+}
+
+/* gạch đỏ chạy khi load trang */
+.main-menu .active-menu::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  height:2px;
+  background:#dc3545;
+  animation:menuUnderline 0.35s ease forwards;
+}
+
+/* animation */
+@keyframes menuUnderline{
+  from{
+    width:0;
+  }
+  to{
+    width:100%;
+  }
+}
+
+/* ===== BANNER ===== */
+
+.banner{
+  max-width:1100px;
+  margin:30px auto;
+}
+
+.banner img{
+  width:100%;
+  height:750px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* ===== DROPDOWN ===== */
+
+.navbar .dropdown:hover .dropdown-menu{
+  display:block;
+}
+
+.dropdown-menu{
+  transition:0.3s;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+/* ===== SEARCH ===== */
+
+.search-box{
+  display:flex;
+  border:1px solid #dc3545;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.search-box input{
+  border:none;
+  padding:6px 12px;
+  outline:none;
+}
+
+.search-box button{
+  border:none;
+  background:#dc3545;
+  color:white;
+  padding:6px 12px;
+}
+
+.search-box button:hover{
+  background:#bb2d3b;
+}
+
+/* ===== TOAST ===== */
+
+.toast-box{
+  position:fixed;
+  top:10%;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:9999;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  pointer-events:none;
+}
+
+.toast-msg{
+  background:#27ae60;
+  color:white;
+  padding:14px 28px;
+  border-radius:10px;
+  font-weight:600;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  animation:toastSlide 3s ease;
+}
+
+@keyframes toastSlide{
+  0%{opacity:0; transform:translateY(20px);}
+  20%{opacity:1; transform:translateY(0);}
+  80%{opacity:1;}
+  100%{opacity:0; transform:translateY(-20px);}
+}
+
+/* ===== CART ===== */
+
+.cart-icon{
+  position:relative;
+  font-size:20px;
+  text-decoration:none;
+}
+
+.cart-count{
+  position:absolute;
+  top:-8px;
+  right:-10px;
+  background:red;
+  color:white;
+  font-size:10px;
+  padding:2px 6px;
+  border-radius:50%;
+  font-weight:bold;
+}

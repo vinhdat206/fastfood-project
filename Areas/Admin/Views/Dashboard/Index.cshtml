@@ -1,0 +1,156 @@
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Dashboard</h1>
+
+
+<div class="cards">
+
+    <div class="card">
+
+        <div>
+
+            <h2>@ViewBag.Users</h2>
+
+            <p>Users</p>
+
+        </div>
+
+        <i class="fas fa-users"></i>
+
+    </div>
+
+
+    <div class="card">
+
+        <div>
+
+            <h2>@ViewBag.Orders</h2>
+
+            <p>Orders</p>
+
+        </div>
+
+        <i class="fas fa-shopping-cart"></i>
+
+    </div>
+
+
+    <div class="card">
+
+        <div>
+
+            <h2>@ViewBag.Products</h2>
+
+            <p>Foods</p>
+
+        </div>
+
+        <i class="fas fa-box"></i>
+
+    </div>
+
+
+    <div class="card">
+
+        <div>
+
+            <h2>@ViewBag.Revenue ₫</h2>
+
+            <p>Revenue</p>
+
+        </div>
+
+        <i class="fas fa-dollar-sign"></i>
+
+    </div>
+
+</div>
+
+
+
+<div class="table">
+
+    <h2>Biểu đồ doanh thu</h2>
+
+    <canvas id="revenueChart"></canvas>
+
+</div>
+
+
+<div class="table">
+
+    <h2>Recent Orders</h2>
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>Total</th>
+            <th>Status</th>
+        </tr>
+
+        @foreach(var order in ViewBag.RecentOrders)
+        {
+            <tr>
+
+                <td>#@order.Id</td>
+
+                <td>@order.CustomerName</td>
+
+                <td>@order.TotalAmount ₫</td>
+
+                <td>@order.Status</td>
+
+            </tr>
+        }
+
+    </table>
+
+</div>
+
+
+
+<script>
+
+var ctx = document.getElementById('revenueChart');
+
+new Chart(ctx, {
+
+type: 'line',
+
+data: {
+
+labels: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.ChartLabels)),
+
+datasets: [{
+
+label: 'Doanh thu',
+
+data: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.ChartData)),
+
+borderColor: '#4f46e5',
+
+backgroundColor: 'rgba(79,70,229,0.2)',
+
+borderWidth: 3,
+
+tension: 0.4,
+
+fill:true
+
+}]
+
+},
+
+options: {
+
+responsive:true
+
+}
+
+});
+
+</script>

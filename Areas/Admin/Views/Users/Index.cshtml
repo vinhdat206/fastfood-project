@@ -1,0 +1,93 @@
+@model List<Microsoft.AspNetCore.Identity.IdentityUser>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Users Management</h1>
+
+<div class="table-container">
+
+    <table>
+
+        <thead>
+        <tr>
+            <th>Email</th>
+            <th>User Name</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        @foreach (var user in Model)
+        {
+            <tr>
+
+                <td>@user.Email</td>
+
+                <td>@user.UserName</td>
+
+                <td>
+
+                    <a href="/Admin/Users/Details/@user.Id"
+                       class="btn-view">
+                        View
+                    </a>
+
+                    <a href="/Admin/Users/Delete/@user.Id"
+                       class="btn-delete">
+                        Delete
+                    </a>
+
+                </td>
+
+            </tr>
+        }
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<style>
+
+.table-container{
+    background:white;
+    border-radius:12px;
+    border:1px solid #e5e7eb;
+    overflow:hidden;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#f9fafb;
+}
+
+th,td{
+    padding:14px;
+    border-bottom:1px solid #eee;
+}
+
+.btn-view{
+    background:#3b82f6;
+    color:white;
+    padding:6px 10px;
+    border-radius:6px;
+    text-decoration:none;
+}
+
+.btn-delete{
+    background:#ef4444;
+    color:white;
+    padding:6px 10px;
+    border-radius:6px;
+    text-decoration:none;
+}
+
+</style>

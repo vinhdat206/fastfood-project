@@ -1,0 +1,159 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FastFood
+build_property.RootNamespace = FastFood
+build_property.ProjectDir = /Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Areas/Admin/Views/Contacts/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ29udGFjdHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Areas/Admin/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvRGFzaGJvYXJkL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Areas/Admin/Views/Foods/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvRm9vZHMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Areas/Admin/Views/Foods/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvRm9vZHMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Areas/Admin/Views/Foods/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvRm9vZHMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Areas/Admin/Views/Foods/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvRm9vZHMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Areas/Admin/Views/Foods/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvRm9vZHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Areas/Admin/Views/Orders/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvT3JkZXJzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Areas/Admin/Views/Orders/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvT3JkZXJzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvU2hhcmVkL19BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Areas/Admin/Views/Users/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvVXNlcnMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Areas/Admin/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvVXNlcnMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Cart/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydC9DaGVja291dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Cart/Success.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FydC9TdWNjZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Db250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Home/Policy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qb2xpY3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Home/_FoodDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9fRm9vZERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Menu/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVudS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Menu/_FoodDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVudS9fRm9vZERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Order/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXIvRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Order/History.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXIvSGlzdG9yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-kb4ruqsqzx

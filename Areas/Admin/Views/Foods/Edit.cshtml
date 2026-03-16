@@ -1,0 +1,67 @@
+@model FastFood.Models.Food
+
+<link rel="stylesheet" href="~/css/admin/food/edit.css" />
+
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
+
+    <input type="hidden" asp-for="FoodId" />
+
+    <div class="mb-3">
+        <label>Tên món</label>
+        <input asp-for="FoodName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Giá gốc</label>
+        <input asp-for="Price" id="price" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>% giảm giá</label>
+        <input asp-for="DiscountPercent" id="discount" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Giá sau giảm</label>
+        <input asp-for="DiscountPrice" id="finalPrice" class="form-control" readonly />
+    </div>
+
+    <div class="mb-3">
+        <label>Ảnh hiện tại</label>
+        <br />
+
+        @if(!string.IsNullOrEmpty(Model.Image))
+        {
+            <img src="@Model.Image" style="width:120px;height:120px;object-fit:cover;border-radius:8px;border:1px solid #ddd;" />
+        }
+    </div>
+
+    <div class="mb-3">
+        <label>Upload ảnh mới</label>
+        <input type="file" name="ImageFile" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Hoặc link ảnh</label>
+        <input asp-for="Image" class="form-control"
+               placeholder="Ví dụ: /images/burger.jpg hoặc https://abc.com/burger.jpg" />
+
+        <small class="text-muted">
+            💡 Có thể nhập link ảnh từ internet hoặc đường dẫn trong thư mục <b>/images</b>
+        </small>
+    </div>
+
+    <div class="d-flex gap-2">
+
+        <button class="btn btn-success flex-fill">
+            Lưu
+        </button>
+
+        <a href="/Admin/Foods/Index" class="btn btn-secondary flex-fill">
+            Hủy
+        </a>
+
+    </div>
+
+</form>
+

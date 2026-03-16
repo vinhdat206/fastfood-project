@@ -1,0 +1,106 @@
+@model List<CartItem>
+@section Styles{
+    <link rel="stylesheet" href="~/css/user/cart.css" asp-append-version="true" />
+}
+
+<div class="container mt-5">
+
+    <div class="cart-box">
+
+        <!-- HEADER -->
+
+        <div class="cart-header text-center">
+            <h2>🛒 Giỏ Hàng Của Bạn</h2>
+            <p>@Model.Count món hàng</p>
+        </div>
+
+        <table class="table cart-table">
+
+            <thead>
+            <tr>
+                <th>STT</th>
+                <th>Hình ảnh</th>
+                <th>Tên món ăn</th>
+                <th>Ghi chú</th>
+                <th>Số lượng</th>
+                <th>Giá</th>
+                <th>Xóa</th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            @{
+                int stt = 1;
+                decimal total = 0;
+            }
+
+            @foreach(var item in Model)
+            {
+                decimal itemTotal = item.Price * item.Quantity;
+                total += itemTotal;
+
+                <tr>
+
+                    <td>@stt</td>
+
+                    <td>
+                        <img src="@item.Image" class="cart-img">
+                    </td>
+
+                    <td>@item.FoodName</td>
+
+                    <td class="text-muted">@item.Note</td>
+
+                    <td>
+                        <div class="qty-box">
+
+                            <a asp-action="Decrease"
+                               asp-route-id="@item.FoodId"
+                               class="qty-btn">-</a>
+
+                            <span>@item.Quantity</span>
+
+                            <a asp-action="Increase"
+                               asp-route-id="@item.FoodId"
+                               class="qty-btn">+</a>
+
+                        </div>
+                    </td>
+
+                    <td class="price">
+                        @item.Price.ToString("N0") VND
+                    </td>
+
+                    <td>
+                        <a asp-action="Remove"
+                           asp-route-id="@item.FoodId"
+                           class="btn-delete">
+                            Xóa
+                        </a>
+                    </td>
+
+                </tr>
+
+                stt++;
+            }
+
+            </tbody>
+
+        </table>
+
+        <div class="cart-footer">
+
+            <h4>Tổng: @total.ToString("N0") VND</h4>
+
+            <a asp-controller="Cart"
+               asp-action="Checkout"
+               class="btn-checkout">
+                Thanh toán
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
