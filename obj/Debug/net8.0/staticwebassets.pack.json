@@ -45,6 +45,14 @@
       "PackagePath": "staticwebassets/css/user/home.css"
     },
     {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/user/login.css",
+      "PackagePath": "staticwebassets/css/user/login.css"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/css/user/register.css",
+      "PackagePath": "staticwebassets/css/user/register.css"
+    },
+    {
       "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },
@@ -73,48 +81,8 @@
       "PackagePath": "staticwebassets/images/banners/banner-new.png"
     },
     {
-      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/7up.jpg",
-      "PackagePath": "staticwebassets/images/drink/7up.jpg"
-    },
-    {
-      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/coca.jpg",
-      "PackagePath": "staticwebassets/images/drink/coca.jpg"
-    },
-    {
-      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/fanta.jpg",
-      "PackagePath": "staticwebassets/images/drink/fanta.jpg"
-    },
-    {
-      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/lavie.jpg",
-      "PackagePath": "staticwebassets/images/drink/lavie.jpg"
-    },
-    {
-      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/mirinda.jpg",
-      "PackagePath": "staticwebassets/images/drink/mirinda.jpg"
-    },
-    {
-      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/monster.jpg",
-      "PackagePath": "staticwebassets/images/drink/monster.jpg"
-    },
-    {
-      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/pepsi.jpg",
-      "PackagePath": "staticwebassets/images/drink/pepsi.jpg"
-    },
-    {
-      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/sprite.jpg",
-      "PackagePath": "staticwebassets/images/drink/sprite.jpg"
-    },
-    {
-      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/sting.jpg",
-      "PackagePath": "staticwebassets/images/drink/sting.jpg"
-    },
-    {
-      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/drink/strongbow.jpg",
-      "PackagePath": "staticwebassets/images/drink/strongbow.jpg"
-    },
-    {
-      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/burger/BBQ-Bacon-Burgers.jpg",
-      "PackagePath": "staticwebassets/images/foods/burger/BBQ-Bacon-Burgers.jpg"
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/burger/bbq-bacon-burgers.jpg",
+      "PackagePath": "staticwebassets/images/foods/burger/bbq-bacon-burgers.jpg"
     },
     {
       "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/burger/burger-bo-2-lop.jpg",
@@ -231,6 +199,46 @@
     {
       "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/combo/combo-mix-vi-pizza.jpg",
       "PackagePath": "staticwebassets/images/foods/combo/combo-mix-vi-pizza.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/drink/7up.jpg",
+      "PackagePath": "staticwebassets/images/foods/drink/7up.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/drink/coca.jpg",
+      "PackagePath": "staticwebassets/images/foods/drink/coca.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/drink/fanta.jpg",
+      "PackagePath": "staticwebassets/images/foods/drink/fanta.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/drink/lavie.jpg",
+      "PackagePath": "staticwebassets/images/foods/drink/lavie.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/drink/mirinda.jpg",
+      "PackagePath": "staticwebassets/images/foods/drink/mirinda.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/drink/monster.jpg",
+      "PackagePath": "staticwebassets/images/foods/drink/monster.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/drink/pepsi.jpg",
+      "PackagePath": "staticwebassets/images/foods/drink/pepsi.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/drink/sprite.jpg",
+      "PackagePath": "staticwebassets/images/foods/drink/sprite.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/drink/sting.jpg",
+      "PackagePath": "staticwebassets/images/foods/drink/sting.jpg"
+    },
+    {
+      "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/drink/strongbow.jpg",
+      "PackagePath": "staticwebassets/images/foods/drink/strongbow.jpg"
     },
     {
       "Id": "/Users/dovinhdat/Documents/BTL Back-End/FastFood/FastFood/wwwroot/images/foods/pizza/pizza-bo-bam.jpg",

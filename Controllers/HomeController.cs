@@ -10,7 +10,6 @@ namespace FastFood.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationDbContext _context;
-
         public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
         {
             _logger = logger;
@@ -20,22 +19,38 @@ namespace FastFood.Controllers
         // HOME PAGE
         public async Task<IActionResult> Index()
         {
-            var foods = await _context.Foods.ToListAsync();
+            var foods = await _context.Foods
+                .Include(x => x.Category) // 🔥 QUAN TRỌNG
+                .ToListAsync();
 
-            var bestSeller = foods
-                //.OrderBy(x => Guid.NewGuid())
+            // 🔥 sản phẩm thường (không phải combo)
+            var normalFoods = foods
+                .Where(x => x.Category.CategoryName != "Combo")
+                .ToList();
+
+            var bestSeller = normalFoods
+                .OrderBy(x => Guid.NewGuid())
                 .Take(8)
                 .ToList();
 
-            var saleProducts = foods
-                //.OrderBy(x => Guid.NewGuid())
+            var saleProducts = normalFoods
+                .Where(x => x.DiscountPercent > 0) // 🔥 CHỈ LẤY HÀNG GIẢM GIÁ
+                .OrderBy(x => Guid.NewGuid())
+                .Take(4)
+                .ToList();
+
+            // 🔥 combo riêng
+            var comboProducts = foods
+                .Where(x => x.Category.CategoryName == "Combo")
+                .OrderBy(x => Guid.NewGuid())
                 .Take(4)
                 .ToList();
 
             ViewBag.BestSeller = bestSeller;
             ViewBag.SaleProducts = saleProducts;
+            ViewBag.ComboProducts = comboProducts; // 🔥 THÊM DÒNG NÀY
 
-            return View(foods);   // QUAN TRỌNG
+            return View(foods);
         }
 
         // ABOUT PAGE

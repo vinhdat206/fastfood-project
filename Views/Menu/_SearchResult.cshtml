@@ -1,0 +1,23 @@
+@model List<FastFood.Models.Food>
+
+@if (!Model.Any())
+{
+    <div class="p-2">Không tìm thấy</div>
+}
+else
+{
+    foreach (var item in Model)
+    {
+        <div class="search-item p-2 border-bottom d-flex align-items-center"
+     data-id="@item.FoodId"
+     style="cursor:pointer">
+
+            <img src="@item.Image" width="40" class="me-2" />
+
+            <div>
+                <div>@item.FoodName</div>
+                <small>@item.Price.ToString("N0") đ</small>
+            </div>
+        </div>
+    }
+}

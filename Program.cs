@@ -6,24 +6,21 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Connection string
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
-                       ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+                       ?? throw new InvalidOperationException("Connection string not found");
 
 // Database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
 // Identity
 builder.Services.AddDefaultIdentity<IdentityUser>(options =>
-    {
-        options.SignIn.RequireConfirmedAccount = false;
-    })
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+{
+    options.SignIn.RequireConfirmedAccount = false;
+})
+.AddEntityFrameworkStores<ApplicationDbContext>();
 
-// SESSION (cho Cart)
+// Session
 builder.Services.AddDistributedMemoryCache();
-
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30);
@@ -37,7 +34,7 @@ builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
-// Error handling
+// Error
 if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();
@@ -53,42 +50,43 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-// SESSION
 app.UseSession();
 
-// Authentication
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Route
-
-// Area route (Admin)
+// Route Admin
 app.MapControllerRoute(
     name: "areas",
     pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
 
-// Default route (User)
+// Route User
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapRazorPages();
 
+
+//ADMIN 
 using (var scope = app.Services.CreateScope())
 {
-    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
 
-    if (!context.Users.Any(x => x.Role == "Admin"))
+    var username = "admin";
+    var email = "admin@fastfood.com";
+
+    var user = await userManager.FindByNameAsync(username);
+
+    if (user == null)
     {
-        context.Users.Add(new FastFood.Models.User
+        var admin = new IdentityUser
         {
-            Username = "admin",
-            Email = "admin@fastfood.com",
-            Password = "123",
-            Role = "Admin"
-        });
+            UserName = "admin",           
+            Email = email
+        };
 
-        context.SaveChanges();
+        await userManager.CreateAsync(admin, "123");
     }
 }
 

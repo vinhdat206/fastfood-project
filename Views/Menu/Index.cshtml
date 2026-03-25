@@ -57,8 +57,14 @@ foreach (var item in Model)
 
           <div class="product-img">
 
-               <img src="@Url.Content(item.Image)" alt="@item.FoodName">
+               @if(item.DiscountPercent > 0)
+               {
+                    <span class="sale-badge">SALE</span>
 
+                    <span class="discount-badge">-@item.DiscountPercent%</span>
+               }
+
+               <img src="@item.Image">
           </div>
 
           <hr class="product-divider">
@@ -67,12 +73,29 @@ foreach (var item in Model)
 
                <h6>@item.FoodName</h6>
 
-               <p class="text-danger fw-bold">
-                    @item.Price.ToString("N0") đ
-               </p>
+               @if(item.DiscountPercent > 0)
+               {
+                    var salePrice = item.Price - (item.Price * item.DiscountPercent / 100);
+
+                    <p>
+                         <span class="text-muted text-decoration-line-through">
+                              @item.Price.ToString("N0") đ
+                         </span>
+
+                         <span class="text-danger fw-bold">
+                              @salePrice.ToString("N0") đ
+                         </span>
+                    </p>
+               }
+               else
+               {
+                    <p class="text-danger fw-bold">
+                         @item.Price.ToString("N0") đ
+                    </p>
+               }
 
                <button class="buy-now-btn"
-                       onclick="addToCart(@item.FoodId)">
+                       onclick="event.stopPropagation(); addToCart(@item.FoodId)">
                     Thêm vào giỏ
                </button>
 
@@ -148,43 +171,22 @@ food.style.display = "none";
 
 
 <!-- POPUP MODAL -->
-<div class="modal fade" id="foodModal" tabindex="-1">
 
-     <div class="modal-dialog modal-lg modal-dialog-centered">
-
-          <div class="modal-content">
-
-               <div class="modal-body" id="foodModalBody">
-               </div>
-
-          </div>
-
-     </div>
-
-</div>
 
 
 <script>
 
-function openFood(id){
+     function openFood(id){
 
-fetch('/Menu/FoodDetail/' + id)
+          fetch('/Menu/FoodDetail/' + id)
+               .then(res => res.text())
+               .then(html => {
 
-.then(res => res.text())
+                    openModalWithContent(html); 
 
-.then(html => {
+               });
 
-document.getElementById("foodModalBody").innerHTML = html;
-
-var modal = new bootstrap.Modal(
-document.getElementById('foodModal')
-);
-
-modal.show();
-
-});
-
-}
+     }
 function changeQty(num){
 
     let qtyInput = document.getElementById("qty");

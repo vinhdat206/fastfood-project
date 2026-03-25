@@ -54,6 +54,16 @@
       <_ContentIncludedByDefault Remove="wwwroot\images\45KG\g7.jpg" />
       <_ContentIncludedByDefault Remove="wwwroot\images\45KG\g8.jpg" />
       <_ContentIncludedByDefault Remove="wwwroot\images\45KG\g9.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\drink\7up.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\drink\coca.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\drink\fanta.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\drink\lavie.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\drink\mirinda.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\drink\monster.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\drink\pepsi.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\drink\sprite.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\drink\sting.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\drink\strongbow.jpg" />
     </ItemGroup>
 
 </Project>

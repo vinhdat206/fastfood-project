@@ -26,174 +26,188 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
 
-<div class="container">
+   <div class="container">
 
-<!-- LOGO -->
+      <!-- LOGO -->
 
-<a class="navbar-brand d-flex align-items-center" asp-controller="Home" asp-action="Index">
-   <img src="~/images/Logo/Logo.PNG" alt="FastFood Logo" style="height:50px ; margin-right:8px;">
-   <span class="fw-bold text-danger">FastFood</span>
-</a>
-
-<button class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav">
-
-<span class="navbar-toggler-icon"></span>
-
-</button>
-
-<div class="collapse navbar-collapse" id="navbarNav">
-
-<!-- MENU -->
-
-<ul class="navbar-nav mx-auto main-menu">
-
-   <li class="nav-item">
-      <a class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString()=="Home" 
-                         && ViewContext.RouteData.Values["Action"]?.ToString()=="Index" ? "active-menu" : "")"
-         asp-controller="Home" asp-action="Index">
-         Trang chủ
-      </a>
-   </li>
-
-   <li class="nav-item">
-      <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString()=="About" ? "active-menu" : "")"
-         asp-controller="Home" asp-action="About">
-         Giới thiệu
-      </a>
-   </li>
-
-   <li class="nav-item dropdown">
-
-      <a class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString()=="Menu" ? "active-menu" : "")"
-         asp-controller="Menu" asp-action="Index">
-         Sản phẩm
+      <a class="navbar-brand d-flex align-items-center" asp-controller="Home" asp-action="Index">
+         <img src="~/images/Logo/Logo.PNG" alt="FastFood Logo" style="height:50px ; margin-right:8px;">
+         <span class="fw-bold text-danger">FastFood</span>
       </a>
 
-      <a class="nav-link "
-         href="#"
-         data-bs-toggle="dropdown">
-      </a>
+      <button class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav">
 
-      <ul class="dropdown-menu">
+         <span class="navbar-toggler-icon"></span>
 
-         <li>
-            <a class="dropdown-item" asp-controller="Menu" asp-action="Burger">🍔 Burger</a>
-         </li>
+      </button>
 
-         <li>
-            <a class="dropdown-item" asp-controller="Menu" asp-action="Pizza">🍕 Pizza</a>
-         </li>
+      <div class="collapse navbar-collapse" id="navbarNav">
 
-         <li>
-            <a class="dropdown-item" asp-controller="Menu" asp-action="Chicken">🍗 Gà rán</a>
-         </li>
+         <!-- MENU -->
 
-         <li>
-            <a class="dropdown-item" asp-controller="Menu" asp-action="Drink">🥤 Đồ uống</a>
-         </li>
+         <ul class="navbar-nav mx-auto main-menu">
 
-         <li>
-            <a class="dropdown-item" asp-controller="Menu" asp-action="Combo">🍟 Combo</a>
-         </li>
-
-      </ul>
-
-   </li>
-
-   <li class="nav-item">
-      <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString()=="Contact" ? "active-menu" : "")"
-         asp-controller="Home" asp-action="Contact">
-         Liên hệ
-      </a>
-   </li>
-
-   <li class="nav-item">
-      <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString()=="Policy" ? "active-menu" : "")"
-         asp-controller="Home" asp-action="Policy">
-         Chính sách
-      </a>
-   </li>
-
-</ul>
-
-
-<!-- RIGHT SIDE -->
-
-<!-- RIGHT SIDE -->
-<div class="d-flex align-items-center">
-
-   <!-- SEARCH -->
-   <form class="search-box me-3">
-      <input type="text" placeholder="Tìm món..." />
-      <button type="submit">🔍</button>
-   </form>
-
-   <!-- CART -->
-   <a asp-controller="Cart" asp-action="Index" class="cart-icon me-3">
-      🛒
-      <span id="cartCount" class="cart-count">
-         @(Context.Session.GetString("Cart") == null ? 0 :
-            Newtonsoft.Json.JsonConvert.DeserializeObject<List<CartItem>>
-               (Context.Session.GetString("Cart")).Sum(x => x.Quantity))
-      </span>
-   </a>
-
-   <!-- ACCOUNT -->
-   <!-- ACCOUNT -->
-   <div class="dropdown ms-2">
-      <a class="nav-link" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown">
-         <i class="fas fa-user-circle fs-5"></i>
-      </a>
-
-      <ul class="dropdown-menu">
-
-         @if (Context.Session.GetString("UserEmail") == null)
-         {
-            <li>
-               <a class="dropdown-item" href="#" onclick="openLogin()">Login</a>
+            <li class="nav-item">
+               <a class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString()=="Home" 
+                                  && ViewContext.RouteData.Values["Action"]?.ToString()=="Index" ? "active-menu" : "")"
+                  asp-controller="Home" asp-action="Index">
+                  <i class="fa-solid fa-house"></i> Trang chủ
+               </a>
             </li>
 
-            <li>
-               <a class="dropdown-item" href="#" onclick="openRegister()">Register</a>
+            <li class="nav-item">
+               <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString()=="About" ? "active-menu" : "")"
+                  asp-controller="Home" asp-action="About">
+                  Giới thiệu
+               </a>
             </li>
-         }
-         else
-         {
-            <li>
-               <span class="dropdown-item text-danger">
-                  👤 @Context.Session.GetString("UserName")
+
+            <li class="nav-item dropdown">
+
+               <a class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString()=="Menu" ? "active-menu" : "")"
+                  asp-controller="Menu" asp-action="Index">
+                  Sản phẩm
+               </a>
+
+               <a class="nav-link "
+                  href="#"
+                  data-bs-toggle="dropdown">
+               </a>
+
+               <ul class="dropdown-menu">
+
+                  <li>
+                     <a class="dropdown-item" asp-controller="Menu" asp-action="Burger"><i class="fa-solid fa-burger"></i> Burger</a>
+                  </li>
+
+                  <li>
+                     <a class="dropdown-item" asp-controller="Menu" asp-action="Pizza"><i class="fa-solid fa-pizza-slice"></i> Pizza</a>
+                  </li>
+
+                  <li>
+                     <a class="dropdown-item" asp-controller="Menu" asp-action="Chicken"><i class="fa-solid fa-drumstick-bite"></i> Gà rán</a>
+                  </li>
+
+                  <li>
+                     <a class="dropdown-item" asp-controller="Menu" asp-action="Drink"><i class="fa-solid fa-wine-glass"></i> Đồ uống</a>
+                  </li>
+
+                  <li>
+                     <a class="dropdown-item" asp-controller="Menu" asp-action="Combo"><i class="fa-solid fa-layer-group"></i> Combo</a>
+                  </li>
+
+               </ul>
+
+            </li>
+
+            <li class="nav-item">
+               <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString()=="Contact" ? "active-menu" : "")"
+                  asp-controller="Home" asp-action="Contact">
+                  Liên hệ
+               </a>
+            </li>
+
+            <li class="nav-item">
+               <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString()=="Policy" ? "active-menu" : "")"
+                  asp-controller="Home" asp-action="Policy">
+                  Chính sách
+               </a>
+            </li>
+
+         </ul>
+
+
+         <!-- RIGHT SIDE -->
+
+         <!-- RIGHT SIDE -->
+         <div class="d-flex align-items-center">
+
+            <!-- SEARCH -->
+            <div class="search-wrapper me-3 position-relative">
+
+               <div class="search-box">
+                  <input type="text" id="searchInput" placeholder="Tìm món..." autocomplete="off"/>
+                  <button type="button">
+                     <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+               </div>
+
+               <!-- 👇 dropdown PHẢI nằm ngoài -->
+               <div id="searchResultBox" class="search-result-box"></div>
+
+            </div>
+   
+
+            <!-- CART -->
+            <a asp-controller="Cart" asp-action="Index" class="cart-icon me-3">
+               <i class="fa-solid fa-cart-shopping" style="color:black;"></i>
+               @{
+                  var cart = Newtonsoft.Json.JsonConvert.DeserializeObject<List<CartItem>>(
+                     Context.Session.GetString("Cart") ?? "[]"
+                  );
+               }
+
+               <span id="cartCount" class="cart-count">
+                  @(cart.Sum(x => x.Quantity))
                </span>
-            </li>
+            </a>
 
-            <li>
-               <a class="dropdown-item" href="/Order/History">📦 Lịch sử đơn</a>
-            </li>
+            <!-- ACCOUNT -->
+            <!-- ACCOUNT -->
+            <div class="dropdown ms-2">
+               <a class="nav-link" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown">
+                  <i class="fas fa-user-circle fs-5"></i>
+               </a>
 
-            @if (Context.Session.GetString("UserRole") == "Admin")
-            {
-               <li>
-                  <a class="dropdown-item" href="/Admin/Dashboard">
-                     ⚙ Dashboard
-                  </a>
-               </li>
-            }
+               <ul class="dropdown-menu">
 
-            <li>
-               <a class="dropdown-item" href="/Account/Logout">🚪 Logout</a>
-            </li>
-         }
+                  @if (Context.Session.GetString("UserEmail") == null)
+                  {
+                     <li>
+                        <a class="dropdown-item" href="#" onclick="openLogin()">Login</a>
+                     </li>
 
-      </ul>
+                     <li>
+                        <a class="dropdown-item" href="#" onclick="openRegister()">Register</a>
+                     </li>
+                  }
+                  else
+                  {
+                     <li>
+                        <span class="dropdown-item text-danger">
+                           <i class="fa-solid fa-user"></i> @Context.Session.GetString("UserName")
+                        </span>
+                     </li>
+
+                     <li>
+                        <a class="dropdown-item" href="/Order/History"><i class="fa-solid fa-box"></i> Lịch sử đơn</a>
+                     </li>
+
+                     @if (Context.Session.GetString("UserRole") == "Admin")
+                     {
+                        <li>
+                           <a class="dropdown-item" href="/Admin/Dashboard">
+                              <i class="fa-solid fa-user-gear"></i> Dashboard
+                           </a>
+                        </li>
+                     }
+
+                     <li>
+                        <a class="dropdown-item" href="/Account/Logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                     </li>
+                  }
+
+               </ul>
+            </div>
+
+         </div>
+
+      </div>
+
    </div>
-
-</div>
-
-</div>
-
-</div>
 
 </nav>
 
@@ -202,7 +216,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
 <div class="container mt-4">
 
-@RenderBody()
+   @RenderBody()
 
 </div>
 
@@ -211,16 +225,14 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
 <footer class="bg-dark text-white text-center mt-5 p-4">
 
-<p>© 2026 FastFood Restaurant</p>
+   <p>© 2026 FastFood Restaurant</p>
 
-<p>Email: fastfood@gmail.com | Phone: 0123456789</p>
+   <p>Email: fastfood@gmail.com | Phone: 0123456789</p>
 
 </footer>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-@RenderSection("Scripts", required: false)
 <!-- LOGIN MODAL -->
 <div class="modal fade" id="loginModal" tabindex="-1">
    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -234,6 +246,13 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
          <div class="modal-body" id="loginModalBody"></div>
 
       </div>
+   </div>
+</div>
+
+<!--search-->
+<div class="modal fade" id="foodModal" tabindex="-1">
+   <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" id="foodModalContent"></div>
    </div>
 </div>
 
@@ -252,6 +271,11 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
       </div>
    </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+@RenderSection("Scripts", required: false)
+
 <script>
    
 document.addEventListener("submit", async function(e){
@@ -280,10 +304,7 @@ document.addEventListener("submit", async function(e){
 
     }
 
-});                </script>
-</body>
-<script>
-
+});
 function openLogin() {
 
    fetch('/Account/Login')
@@ -291,7 +312,6 @@ function openLogin() {
       .then(html => {
 
          document.getElementById("loginModalBody").innerHTML = html;
-
          var modal = new bootstrap.Modal(document.getElementById('loginModal'));
 
          modal.show();
@@ -355,4 +375,65 @@ document.addEventListener("submit", async function(e){
    }
 
 });
+
+function switchToLogin() {
+   const registerModal = bootstrap.Modal.getInstance(document.getElementById('registerModal'));
+   if (registerModal) registerModal.hide();
+
+   setTimeout(() => {
+      openLogin();
+   }, 300);
+}
+
+
+function openModalWithContent(html){
+
+   const modalEl = document.getElementById("foodModal");
+   const content = document.getElementById("foodModalContent");
+
+   if (!modalEl || !content) {
+      console.error("Modal không tồn tại");
+      return;
+   }
+
+   // reset bootstrap
+   document.body.classList.remove('modal-open');
+   document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
+
+   let oldModal = bootstrap.Modal.getInstance(modalEl);
+   if (oldModal) {
+      oldModal.dispose();
+   }
+
+   // ✅ ĐÚNG Ở ĐÂY
+   content.innerHTML = html;
+
+   const modal = new bootstrap.Modal(modalEl);
+   modal.show();
+}
+
+document.addEventListener("click", async function(e){
+
+   const item = e.target.closest(".search-item");
+   if (!item) return;
+   const id = item.getAttribute("data-id");
+   if (!id) return;
+
+   try {
+      const res = await fetch('/Menu/FoodDetail?id=' + id);
+      const html = await res.text();
+
+      openModalWithContent(html); 
+
+      document.getElementById("searchResultBox").style.display = "none";
+
+   } catch (err) {
+      console.error(err);
+   }
+
+});
 </script>
+</body>
+
+</html>
+

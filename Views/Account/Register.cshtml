@@ -1,190 +1,68 @@
 @{
-Layout = null;
+    Layout = null;
 }
 
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
-}
-
-body{
-    background:none;
-    height:auto;
-    display:block;
-}
-
-/* Card */
-
-.register-card{
-    width:100%;
-    max-width:420px;
-    margin:auto;
-}
-
-.register-card h1{
-font-size:28px;
-margin-bottom:10px;
-}
-
-.register-card p{
-color:#777;
-margin-bottom:30px;
-}
-
-/* input */
-
-.input-group{
-position:relative;
-margin-bottom:20px;
-}
-
-.input-group input{
-width:100%;
-padding:14px 40px 14px 14px;
-border-radius:10px;
-border:1px solid #ddd;
-font-size:15px;
-}
-
-.input-group i{
-position:absolute;
-right:12px;
-top:50%;
-transform:translateY(-50%);
-color:#999;
-}
-
-/* button */
-
-.register-btn{
-width:100%;
-padding:14px;
-border:none;
-border-radius:10px;
-background:linear-gradient(90deg,#5f8df6,#7c4dff);
-color:white;
-font-size:16px;
-cursor:pointer;
-margin-bottom:20px;
-}
-
-.register-btn:hover{
-opacity:0.9;
-}
-
-/* divider */
-
-.divider{
-margin:15px 0;
-color:#999;
-font-size:14px;
-}
-
-/* social */
-
-.social{
-display:flex;
-gap:15px;
-margin-bottom:20px;
-}
-
-.social button{
-flex:1;
-padding:10px;
-border-radius:10px;
-border:1px solid #ddd;
-background:white;
-cursor:pointer;
-}
-
-.social button i{
-margin-right:6px;
-}
-
-/* login link */
-
-.login{
-font-size:14px;
-}
-
-.login a{
-color:#5f8df6;
-text-decoration:none;
-font-weight:bold;
-}
-
-</style>
-
-
-
-
+<link rel="stylesheet" href="~/css/user/register.css">
 
 <div class="register-card">
+    <div class="burger-deco">
+        <i class="fas fa-hamburger"></i>
+    </div>
+    <div class="soda-deco">
+        <i class="fas fa-cocktail"></i>
+    </div>
+    
+    <h1>Tạo tài khoản</h1>
+    <p>Đăng ký để sử dụng dịch vụ <i class="fa-solid fa-burger" style ="color: orange"></i></p>
 
-<h1>Tạo tài khoản</h1>
-<p>Đăng ký để sử dụng dịch vụ</p>
+    <form id="registerForm">
+        <div class="input-group">
+            <input type="text" name="Username" placeholder=" Tên đăng nhập" required>
+            <i class="fas fa-user"></i>
+        </div>
 
-<form id="registerForm">
+        <div class="input-group">
+            <input type="email" name="Email" placeholder=" Email">
+            <i class="fas fa-envelope"></i>
+        </div>
 
-<div class="input-group">
-    <input type="text" name="Username" placeholder="Tên đăng nhập" required>
-<i class="fa fa-user"></i>
+        <div class="input-group">
+            <input type="password" name="Password" placeholder=" Mật khẩu">
+            <i class="fas fa-lock"></i>
+        </div>
+
+        <div class="input-group">
+            <input type="password" name="ConfirmPassword" placeholder=" Xác nhận mật khẩu" required>
+            <i class="fas fa-lock"></i>
+        </div>
+
+        <div id="registerError" class="text-danger mt-2" style="display:none;"></div>
+
+        <button type="submit" class="register-btn">
+            <i class="fas fa-user-plus"></i> Đăng Ký
+        </button>
+    </form>
+
+    <div class="divider">
+        Hoặc đăng ký với
+    </div>
+
+    <div class="social">
+        <button>
+            <i class="fab fa-facebook"></i>
+            Facebook
+        </button>
+        <button>
+            <i class="fab fa-google"></i>
+            Google
+        </button>
+    </div>
+
+    <div class="login">
+        Đã có tài khoản? 
+        <a href="#" onclick="event.preventDefault(); switchToLogin()">Đăng nhập</a>
+    </div>
 </div>
-
-<div class="input-group">
-<input type="email" name="Email" placeholder="Email">
-<i class="fa fa-envelope"></i>
-</div>
-
-<div class="input-group">
-<input type="password" name="Password" placeholder="Mật khẩu">
-<i class="fa fa-lock"></i>
-</div>
-
-<div class="input-group">
-    <input type="password" name="ConfirmPassword" placeholder="Xác nhận mật khẩu" required>
-    <i class="fa fa-lock"></i>
-</div>
-
-<div id="registerError" class="text-danger mt-2" style="display:none;"></div>
-
-
-<button type="submit" class="register-btn">Đăng Ký</button>
-
-</form>
-
-<div class="divider">
-Hoặc đăng ký với
-</div>
-
-<div class="social">
-
-<button>
-<i class="fab fa-facebook"></i>
-Facebook
-</button>
-
-<button>
-<i class="fab fa-google"></i>
-Google
-</button>
-
-</div>
-
-<div class="login">
-
-Đã có tài khoản?
-<a href="#" onclick="openLogin()">Đăng nhập</a>
-
-</div>
-
-</div>
-
-

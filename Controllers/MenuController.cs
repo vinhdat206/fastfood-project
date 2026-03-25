@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using FastFood.Data;
 using FastFood.Models;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace FastFood.Controllers
 {
@@ -97,14 +98,32 @@ namespace FastFood.Controllers
         public IActionResult FoodDetail(int id)
         {
             var food = _context.Foods
+                .AsNoTracking()
                 .FirstOrDefault(f => f.FoodId == id);
 
             if (food == null)
-            {
                 return NotFound();
-            }
 
             return PartialView("_FoodDetail", food);
+        }
+        
+        
+        
+        public IActionResult SearchAjax(string keyword)
+        {
+            if (string.IsNullOrEmpty(keyword))
+            {
+                return PartialView("_SearchResult", new List<Food>());
+            }
+
+            var result = _context.Foods
+                .AsNoTracking()
+                .Where(p => p.FoodName.Contains(keyword))
+                .OrderByDescending(p => p.FoodId)
+                .Take(5)
+                .ToList();
+
+            return PartialView("_SearchResult", result);
         }
     }
 }
